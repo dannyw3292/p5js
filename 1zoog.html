@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
+    
+    <script>
+        function setup() {
+            //TO DO LIST:
+            //ROTATE THE EYEBROW LIKE DESIGN!
+            //FINISH THE REST OF THE CODE TO LOOK LIKE DESIGN!
+            createCanvas(800,600);
+            stroke(0);
+            
+            //base head
+            strokeWeight(5);
+            fill(150,150,150);
+            ellipse(375,350,400,400);
+            
+            //neck
+            strokeWeight(6);
+            rect(400,425,100,150);
+            
+            //eye
+            strokeWeight(3)
+            fill(89,5,5);
+            ellipse(300,300,200,40);
+            strokeWeight(2);
+            line(200,320,300,330);
+            
+            //jaw section
+            strokeWeight(1);
+            strokeWeight(9);
+            fill(75,75,75);
+            rect(150,400,400,150);
+            fill(124,124,124);
+            rect(150,375,80,25);
+            rect(250,375,80,25);
+            
+            //jaw circle connection
+            strokeWeight(3);
+            fill(160,160,160);
+            ellipse(550,400,100,100);
+            strokeWeight(50);
+            point(550,400);
+            
+            //antennae
+            strokeWeight(3);
+            line(450,163,450,120);
+            strokeWeight(15);
+            point(450,122)
+            
+            //brow
+            strokeWeight(1);
+            strokeWeight(4);
+            fill(76,76,76);
+            rect(190,200,220,60);
+
+            
+            
+            //text
+            strokeWeight(1);
+            textSize(40);
+            textStyle(BOLD);
+            fill(0);
+            text("-STARES WITH DISBELIEF-",0,40);
+            
+        }
+
+        function draw() {
+            
+        }
+    </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/Dannyw3292/p5js/blob/gh-pages/1zoog.html?footer=0"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+
+</html>
