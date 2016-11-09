@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
+    
+    <script>
+    var r,g,b
+    
+        //The random color variables are assigned above and defined below with
+        //the default gray background.
+        function setup() {
+            createCanvas(800,600);
+            r = random(50,200)
+            g = random(50,200)
+            b = random(50,200)
+            background(200);
+        }
+        function mouseDragged() {
+            
+            //this will form the curved rectangles in a black background
+            //with the black square within
+            background(0);
+            rect(mouseX- 100,mouseY- 100,width/4,height/3,25,25,25,25)
+            fill(0);
+            rect(mouseX- 50,mouseY- 50,100,100)
+            fill(255,255,255);
+            strokeWeight(0)
+        }
+                
+        function keyPressed() {
+            
+            //The background, the stroke, and its weight has random colors
+            strokeWeight(20);
+            background(r,g,b)
+            stroke(random(255),random(255),random(255))
+            
+            // these 3 lines form the N.
+            line(100,100,100,400)
+            line(100,100,300,400)
+            line(300,400,300,100)
+            
+            //this creates the O, making NO.
+            ellipse(550,275,150,300)
+
+            //this just replaces the line, the ellipse and the rectangle
+            //borders with random colors.
+            fill(r,g,b)
+
+            
+        }
+        
+    </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/dannyw3292/p5js/blob/gh-pages/interaction-project.html?footer=0"></script>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+
+</html>
