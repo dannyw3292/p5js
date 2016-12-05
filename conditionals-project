@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
+    
+    <script>
+    
+    // these are the 4 variables that will be used and are defined in function setup
+    var x,y,w,h
+    
+        function setup() {
+            
+            //the canvas is made along with the background and has the variables that were
+            //declared to be given a definition to be used for the rest of the code.
+            createCanvas(800,600);
+            background(200);
+            x = 50
+            y = 50
+            w = 40
+            h = 40
+        }
+
+        function keyPressed() {
+            
+            // this will confirm that the up arrow is being pressed and if its met,
+            // it will create ellipses that constantly move upwards until the border is met
+            if(keyCode == UP_ARROW){
+                ellipse(x,y,w,h)
+                y -= 15
+            }
+            
+            // this will confirm that the down arrow is being pressed and if its met,
+            // it will create ellipses that constantly move downwards until the border is met
+            else if(keyCode == DOWN_ARROW){
+                ellipse(x,y,w,h)
+                y+=15
+            }
+            
+            // this will confirm that the right arrow is being pressed and if its met,
+            // it will create ellipses that constantly move to the right until the border is met
+            if(keyCode == RIGHT_ARROW){
+                ellipse(x,y,w,h)
+                x+=15
+            }
+            
+            // this will confirm that the left arrow is being pressed and if its met,
+            // it will create ellipses that constantly move to the left until the border is met
+            else if(keyCode == LEFT_ARROW){
+                ellipse(x,y,w,h)
+                x-=15
+            }
+            
+            //this will clear the canvas and replace it with a new layer of the gray background
+            else if(key.toLowerCase() == "W"){
+                clear()
+                background(200)
+            }
+            
+            //the pen is down, thus it will be drawing, though it may be glitchy and puffs
+            //another circle or not before actually continuing.
+            else if(key.toLowerCase() == "a"){
+                ellipse(x,y,40,40)
+                stroke()
+            }
+            
+            //the pen is up, thus it is not drawing anything, though it may be glitchy and puffs
+            // a single circle before actually going up
+            else if(key.toLowerCase() == "s"){
+                ellipse(x,y,40,40)
+                noStroke()
+                noFill()
+            }
+            
+            //the color of the circles (or brush) changes and is assigned random of r,g,b
+            // tad bit glitchy, might reset the size of the brush and change the color of that instead of
+            //the new shape size.
+            else if(key.toLowerCase() == "d"){
+                ellipse(x,y,w,h)
+                fill(random(0,255),random(0,255),random(0,255))
+            }
+            
+            //size increases upon pressing f, may be glitchy/laggy, might lift the pen up
+            // instead of increasing the size, fix it by pressing A again and then continuing
+            else if(key.toLowerCase() == "f"){
+                ellipse(x,y,w,h)
+                w+=20
+                h+=20
+            }
+            
+            //size decreases upon pressing g, may be glitchy and might lift the pen up
+            // instead of decreasing the size, fix it by pressing A again and then continuing.
+            else if(key.toLowerCase() == "g"){
+                ellipse(x,y,w,h)
+                w-=20
+                h-=20
+
+            }
+        }
+
+        
+    </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/dannyw3292/p5js/blob/gh-pages/conditionals-project.html?footer=0"></script>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+
+</html>
