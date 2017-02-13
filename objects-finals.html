@@ -98,7 +98,7 @@
 
             //the timer
             this.timer = function() {
-                text("Time: " + millis() / 1000, 30, 30); //timer in seconds on the top left corner
+                text("Time: " + floor(millis() / 1000), 30, 30); //timer in seconds on the top left corner
             }
 
         }
